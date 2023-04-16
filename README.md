@@ -7,4 +7,5 @@
 <li>this game tests user softskills with riddles and few fun guessing games (luck factor important) </li>
   <li>made use of html,css,javascript and php in order to develop this game</li>
   </ul>
+  <h2>download the zip file and your main page is index.html which opens using xampp server and copy the sql code too !</h2>
   <h1 align="center"  >have fun gaming</h1>
