@@ -1,0 +1,61 @@
+body{
+    background-image: url('imgs/r1.jpg');
+    overflow: hidden;
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.road{
+    border-bottom: 7px solid white;
+    
+}
+.panda{
+    background-image: url('panda.png');
+    width:250px;
+    height:300px;
+    animation:walk 1s steps(12) infinite,
+              forward 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes walk{
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: 3000px;
+    }
+}
+@keyframes forward{
+    0%{
+ transform: translateX(0px);   
+    }
+    100%{
+        transform: translateX(1240px);
+    }
+}
+
+/* first puzzle */
+input {
+    font-size: inherit;
+    margin: 1em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    font-size: inherit;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}

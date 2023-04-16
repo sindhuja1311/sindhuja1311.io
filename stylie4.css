@@ -1,0 +1,49 @@
+body{
+    background-image: url('imgs/r4.jpg');
+    font-family: sans-serif;
+    color: white;
+}
+.road{
+    border-bottom: 7px solid black;
+    
+}
+.panda{
+    background-image: url('panda.png');
+    width:250px;
+    height:300px;
+    animation:walk 1s steps(12) infinite,
+              forward 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes walk{
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: 3000px;
+    }
+}
+@keyframes forward{
+    0%{
+ transform: translateX(0px);   
+    }
+    100%{
+        transform: translateX(1240px);
+    }
+}
+
+        body{text-align: center;
+        font-family: sans-serif;}
+        h1{
+            font-size: 2em;
+            margin-top: 50px;
+        }
+        #guess-input{
+            font-size: 1.5em;
+            width: 60px;
+        }
+        button{
+            font-size:1.5em;
+            margin-top:10px;
+        }
+

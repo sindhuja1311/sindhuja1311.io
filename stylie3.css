@@ -1,0 +1,59 @@
+body{
+    background-image: url('imgs/r3.jpg');
+    font-family: sans-serif;
+    color: white;
+}
+.road{
+    border-bottom: 7px solid black;
+    
+}
+.panda{
+    background-image: url('panda.png');
+    width:250px;
+    height:300px;
+    animation:walk 1s steps(12) infinite,
+              forward 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes walk{
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: 3000px;
+    }
+}
+@keyframes forward{
+    0%{
+ transform: translateX(0px);   
+    }
+    100%{
+        transform: translateX(1240px);
+    }
+}
+
+
+.game3 {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+  
+  input {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  

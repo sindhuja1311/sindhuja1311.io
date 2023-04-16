@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="stylie.css">
+</head>
+<body>
+    <div>
+        <h1 align="center">help panda reach next level?</h1>
+</div>
+<!--FIRST PUZZLE-->
+    <div class="panda">
+    </div>
+   
+   <div class="puzzle-1"> 
+        <h1 align="center">Level 1</h1>
+	    <p align="center">What is always in front of you but can't be seen?</p>
+	    <form align="center">
+		    <label for="answer">Your answer:</label>
+		    <input type="text" id="answer" name="answer" required>
+            <button id="hint">Hint</button>
+		    <button type="submit">Submit</button>
+	    </form>
+	    <script>
+		    const form = document.querySelector('form');
+            document.querySelector("#hint").addEventListener("click", () => {
+            alert("everyone works now to have bright?");});
+		    form.addEventListener('submit', (e) => {
+			    e.preventDefault();
+			    const answer = form.elements.answer.value.toLowerCase();
+			    if (answer === 'future') {
+                    location.replace("panda2.html");
+			    } else {
+				    alert('Sorry, try again!');
+		    	}
+			    form.reset();
+		    });
+	    </script>
+    </div>
+</body>
+</html>

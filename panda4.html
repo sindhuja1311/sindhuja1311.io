@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylie4.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--FOURTH GAME-->
+    <div>
+        <h1 align="center">congo on passing level-3</h1>
+        <h3 align="center">now help Mr.Panda reaching next level :P</h3>
+    </div>
+        <div class="panda">
+        </div>
+        
+        <h1>GUESS THE NUMBER BETWEEN 1 & 20</h1>
+        <H3>THIS IS A DEAD-END ROUND IF FAILED U HAVE TO RESTART FROM ROUND-1..</H3>
+        <H4>RULES</H4>
+        <UL>
+            <LI>EVERY WRONG GUESS U WILL KNOW WHETHER THE SEEKED NUMBER IS HIGHER OR LOWER THAN UR ANSWER (HIGHEST CLUES GAME MAKE SURE U ANALYSE IT RIGHT)</LI>
+            <LI>THIS IS KINDA LUCK BASED SO GOOD LUCK! </LI>
+        </UL>
+    <label for="guess-input">Guess?</label>
+    <input type="number" id="guess-input">
+    <button onclick="guess()">Submit</button>
+    <p id="result"></p>
+    <p>Remaining Attempts: <span id="remaining-attempts">5</span></p>
+    <button id="res" onclick="restart()">RESTART</button>
+   <script>
+        const randomNumber = Math.floor(Math.random() * 20) + 1;
+        let remainingAttempts = 5;
+        function guess() {
+        const guess = parseInt(document.getElementById("guess-input").value);
+        const remainingAttemptsElement = document.getElementById("remaining-attempts");
+
+        if (isNaN(guess)) {
+          document.getElementById("result").textContent = "Please enter a valid number";
+        } 
+        else if (guess < 1 || guess > 100) {
+          document.getElementById("result").textContent = "Please enter a number between 1 and 100";
+        } 
+        else if (guess === randomNumber) {
+            alert('congratulations!');
+          remainingAttemptsElement.textContent = remainingAttempts;
+          location.replace('panda5.html');
+        }
+         else if (guess < randomNumber) {
+          document.getElementById("result").textContent = "Your guess is too low.Try again.";
+          remainingAttempts--;
+          remainingAttemptsElement.textContent = remainingAttempts;
+        }
+         else if (guess > randomNumber) {
+          document.getElementById("result").textContent = "Your guess is too high.Try again.";
+          remainingAttempts--;
+          remainingAttemptsElement.textContent = remainingAttempts;
+        }
+        if (remainingAttempts === 0) {
+          document.getElementById("result").textContent = "Sorry, you have used all your attempts. The number was " + randomNumber + "sorry,go to lvl1";
+          document.getElementById("guess-input").setAttribute("disabled", "");
+          
+        }
+
+      }
+      function restart(){
+        location.replace('panda1.html');
+      }
+    </script>
+    
+</body>
+</html>

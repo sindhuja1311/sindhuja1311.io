@@ -1,0 +1,54 @@
+body{
+    background-image:url('imgs/r2.jpg');
+    color:white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.road{
+    border-bottom: 7px solid white;
+    overflow: hidden;
+    
+}
+.panda{
+    background-image: url('panda.png');
+    width:250px;
+    height:300px;
+    animation:walk 1s steps(12) infinite,
+              forward 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes walk{
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: 3000px;
+    }
+}
+@keyframes forward{
+    0%{
+ transform: translateX(0px);   
+    }
+    100%{
+        transform: translateX(1240px);
+    }
+}
+#left{
+    align-items: left;
+}
+h1 {
+    color: #FF6347;
+    text-align: center;
+}
+
+.box {
+    background-color: #ADD8E6;
+    height: 150px;
+    width: 150px;
+    margin: 50px auto;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 48px;
+    cursor: pointer;
+}

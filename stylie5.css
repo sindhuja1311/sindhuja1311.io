@@ -1,0 +1,69 @@
+body{
+        background-image: url('imgs/r5.jpg');
+        font-family: sans-serif;
+        color: white;
+        font-size: 20px;
+    
+}
+.road{
+    border-bottom: 7px solid black;
+    
+}
+.panda{
+    background-image: url('panda.png');
+    width:250px;
+    height:300px;
+    animation:walk 1s steps(12) infinite,
+              forward 6s linear infinite;
+    overflow: hidden;
+}
+@keyframes walk{
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: 3000px;
+    }
+}
+@keyframes forward{
+    0%{
+ transform: translateX(0px);   
+    }
+    100%{
+        transform: translateX(1240px);
+    }
+}
+
+#game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+#choices {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+button {
+	margin: 10px;
+	padding: 10px 20px;
+	font-size: 20px;
+	background-color: #f2f2f2;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #ccc;
+}
+
+#result {
+	font-size: 30px;
+	font-weight: bold;
+}

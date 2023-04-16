@@ -1,0 +1,43 @@
+body{
+    background-image: url('imgs/r6.jpg');
+}
+#navbar ul {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+    height: 500px;
+    box-sizing: border-box;
+    opacity:0.9;
+  }
+  
+ #navbar li {
+    float:left;
+ }
+ #navbar li a {
+    font-family: thick;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+ #navbar li a:hover {
+    background-color:white;
+    color:black
+  }
+  #navbar{
+    background-image: url('imgs/PAN_HAPPY1.png');
+        color: white;
+        text-align:center;
+        width: 800px;
+        margin: 0 auto;
+        height: 700px; 
+        border-style: groove;
+        padding: 50px;
+        border-style: groove;
+        padding: 50px;
+        box-shadow: 10px 10px 5px rgb(172, 200, 210);
+  }

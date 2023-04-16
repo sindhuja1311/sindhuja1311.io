@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="stylie3.css">
+</head>
+<body>
+   
+<!--THIRD PUZZLE-->
+<div>
+    <h1 align="center">congo on passing level-2</h1>
+    <h3 align="center">now help Mr.Panda reaching next level :P</h3>
+</div>
+    <div class="panda">
+    </div>
+   
+    <div class="game3">
+            <h2>Two Riddles</h2>
+            <p id="clue1">What goes up but never comes down?</p>
+            <input type="text" id="answer1" placeholder="Your answer here...">
+            <button id="submit1" onclick="checkAnswer1()">Submit</button>
+            <button id="hint1" onclick="hint1()">Hint?</button>
+            <p id="result1"></p>
+          
+            <p id="clue2">I am always hungry, I must always be fed. The finger I touch, will soon turn red. What am I?</p>
+            <input type="text" id="answer2" placeholder="Your answer here...">
+            <button id="submit2" onclick="checkAnswer2()">Submit</button>
+            <button id="hint2" onclick="hint2()">Hint?</button>
+            <p id="result2"></p>
+            <p>both correct?</p>
+            <button id="nxt" onclick="next()">GO</button>
+            <script>
+                    function checkAnswer1() {
+  var answer = document.getElementById("answer1").value.toLowerCase();
+  if (answer === "age") {
+    document.getElementById("result1").innerHTML = "Correct!";
+    document.getElementById("result1").style.color = "green";
+  } else {
+    document.getElementById("result1").innerHTML = "Incorrect. Please try again.";
+    document.getElementById("result1").style.color = "red";
+  }
+}
+function hint1(){
+    var clue="as every year goes by this increses!";
+    document.getElementById("result1").innerHTML ="HINT: as every year goes by this increases!!";
+    
+    document.getElementById("result1").style.color="white";
+}
+function hint2(){
+    var clue="its hot!";
+    document.getElementById("result2").innerHTML ="HINT: its hot!";
+    
+    document.getElementById("result2").style.color="white";
+}
+function checkAnswer2() {
+  var answer = document.getElementById("answer2").value.toLowerCase();
+  if (answer === "fire") {
+    document.getElementById("result2").innerHTML = "Correct!";
+    document.getElementById("result2").style.color = "green";
+  } else {
+    document.getElementById("result2").innerHTML = "Incorrect. Please try again.";
+    document.getElementById("result2").style.color = "red";
+  }
+}
+ function next(){
+    location.replace('panda4.html');
+ }
+
+            </script>
+          
+
+    </div>
+</body>
+</html>

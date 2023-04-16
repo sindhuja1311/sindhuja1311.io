@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="stylie2.css">
+</head>
+<body>
+   
+<!--SECOND PUZZLE-->
+<div>
+    <h1 align="center">congo on passing level-1</h1>
+    <h3 align="center">now help Mr.Panda reaching next level :P</h3>
+</div>
+    <div class="panda">
+    </div>
+    
+    <div>
+        <h1 align="center">Click the Box</h1>
+	<div class="box"></div>
+	<form action="" align="center">
+    <p>guess after how many clicks you get light blue?</p>
+	<input type="text" id="ans">
+	<input type="submit" id="ans1" onclick="func()">
+</form>
+<div id="left" align="left">
+    <p align="center">this is a no hint round and a freepass round</p>
+	<p align="center"> all you have to do is click the box and check after how many click u get light </p>
+	<p align="center">blue and write down the answer checking your counting skills</p>
+</div>	
+	<script>
+		let clicks = 0;
+		const maxClicks = 3;
+		function func(){
+		let x=document.querySelector("#ans").value;
+			if(x==maxClicks){
+				alert("correct answer now tap on the box to check!");
+			}
+			else{
+				alert("try again!");
+				form.reset();
+			}
+		}
+		document.querySelector(".box").addEventListener("click", function() {
+			clicks++;
+			if (clicks === 1) {
+				this.style.backgroundColor = "#FF6347";
+			} else if (clicks === 2) {
+				this.style.backgroundColor = "#00FF7F";
+			} else if (clicks === 3) {
+				this.style.backgroundColor = "#FFD700";
+			} else {
+				this.style.backgroundColor = "#ADD8E6";
+				clicks = 0;
+			}
+			
+			if (clicks === maxClicks) {
+				alert("Congratulations, you solved the puzzle!");
+				location.replace('panda3.html');
+			}
+		});
+	</script>
+    </div>
+</body>
+</html>
